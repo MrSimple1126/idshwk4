@@ -1,34 +1,4 @@
-Skip to content
-Product 
-Team
-Enterprise
-Explore 
-Marketplace
-Pricing 
-Search
-Sign in
-Sign up
-weltliter
-/
-idshwk4
-Public
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-idshwk4/test.zeek
-@weltliter
-weltliter Update test.zeek
-Latest commit cd3a1bb 3 days ago
- History
- 1 contributor
-30 lines (25 sloc)  1.22 KB
-  
-@load base/frameworks/sumstats
+ @load base/frameworks/sumstats
 
 event http_reply(c:connection, version:string, code:count, reason:string){
 	SumStats::observe("all_response", SumStats::Key($host = c$id$orig_h), SumStats::Observation($num = 1));
@@ -58,16 +28,3 @@ event zeek_init(){
 		}
 	]);
 }
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
